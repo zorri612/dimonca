@@ -1,0 +1,136 @@
+:root {
+  --rosa: #ff8fa3;
+  --marron: #4e2c2a;
+  --crema: #fff4f1;
+  --blanco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --transicion: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--crema);
+  color: var(--marron);
+  line-height: 1.6;
+
+}
+
+header {
+  background: linear-gradient(135deg, var(--rosa), var(--crema));
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3.5rem;
+  color: var(--blanco);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--blanco);
+}
+
+.btn-principal {
+  background-color: var(--blanco);
+  color: var(--rosa);
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+.btn-principal:hover {
+  background-color: var(--rosa);
+  color: var(--blanco);
+}
+
+.seccion-productos {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.seccion-productos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--marron);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  max-width: 1100px;
+
+}
+
+.producto {
+  background-color: var(--blanco);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px var(--sombra);
+  transition: var(--transicion);
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 1rem;
+  color: #6b4b4b;
+}
+
+.producto button {
+  background-color: var(--rosa);
+  color: var(--blanco);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transicion);
+}
+
+.producto button:hover {
+  background-color: var(--marron);
+}
+
+footer {
+  background-color: var(--marron);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+footer {
+  min-height: 100px;
+  position: relative;
+}
