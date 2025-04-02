@@ -4,6 +4,7 @@ import Header from './components/Header';
 import ProductList from './components/ProductList';
 import CartPage from './components/CartPage';
 import FloatingCartButton from './components/FloatingCartButton';
+import CheckoutPage from './components/CheckoutPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/carrito" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
         <FloatingCartButton />
       </Router>

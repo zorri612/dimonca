@@ -15,7 +15,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(180deg, var(--beige) 30%, var(--blanco) 70%);
+  background: linear-gradient(180deg, var(--beige) 50%, var(--blanco) 70%);
   color: var(--marron);
   line-height: 1.6;
   min-height: 100vh;
@@ -40,6 +40,9 @@ header {
   text-decoration: none;
   box-shadow: 0 4px 8px var(--sombra);
 }
+.cart-button:hover{
+  background-color: #4e2c2a;
+}
 
 .cart-count {
   background-color: white;
@@ -59,12 +62,33 @@ header {
   border-radius: 30px;
   transition: var(--transicion);
   box-shadow: 0 4px 10px var(--sombra);
+  margin-bottom: 20px;
+ 
 }
+
 
 .btn-regresar:hover {
   background-color: #ff8fa3;
   color: #fff;
 }
+
+.btn-ver-productos{
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: var(--transicion);
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+.btn-ver-productos:hover{
+  background-color: #ff8fa3;
+  color: #fff;
+}
+
 .cart-img-small {
   width: 60px;
   height: 60px;
@@ -83,3 +107,31 @@ header {
 .elmnrbtn{
   padding-bottom: 20px;
 }
+
+.eslogan{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px; /* Ajusta este valor según la posición del carrito */
+  right: 20px;
+  z-index: 1100; /* Asegura que esté sobre otros elementos */
+  background-color: #ff8fa3;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+}
+
+
+.scroll-to-top:hover {
+  color: white;
+  background-color: #4e2c2a;
+}
+

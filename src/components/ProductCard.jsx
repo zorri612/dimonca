@@ -11,6 +11,8 @@ const ProductCard = ({ product }) => {
       <Card.Body className="d-flex flex-column">
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
+        <Card.Text>{product.nota}</Card.Text>
+        <p><strong>Precio:</strong> ${product.precio?.toLocaleString()} c/u</p>
         <Button
           variant="primary"
           onClick={() => addToCart(product)}
