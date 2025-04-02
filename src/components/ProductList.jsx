@@ -161,7 +161,7 @@ const products = [
 
 // Definir las categorías que tenemos
 const categories = [
-  { id: "cookies", label: "Nuestras Cookies 🍪" },
+  { id: "cookies", label: "Nuestras Cookies 🍪", },
   { id: "pasteles", label: "Pasteles" },
   { id: "cheesecakes", label: "Cheesecakes " },
   { id: "promos", label: "Nuestras Promos para ti! 🎉"}
@@ -169,8 +169,6 @@ const categories = [
 
 const ProductList = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [cart, setCart] = useState([]);
-  const shippingCost = 5000; // Valor fijo del envío
 
   useEffect(() => {
     const handleScroll = () => {

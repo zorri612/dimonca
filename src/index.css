@@ -22,11 +22,20 @@ body {
 }
 
 
-header {
-  background: linear-gradient(135deg, var(--beige), var(--crema));
-  padding: 3rem 2rem;
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 20px;
 }
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  width: 600px; /* Ajustable según necesidad */
+}
+
 .cart-button {
   position: fixed;
   bottom: 20px;
@@ -72,21 +81,17 @@ header {
   color: #fff;
 }
 
-.btn-ver-productos{
-  display: inline-block;
+.btn-ver-productos {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
   background-color: white;
   color: black;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: var(--transicion);
-  box-shadow: 0 4px 10px var(--sombra);
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
 }
-
-.btn-ver-productos:hover{
+.btn-ver-productos:hover {
   background-color: #ff8fa3;
-  color: #fff;
 }
 
 .cart-img-small {
@@ -108,8 +113,10 @@ header {
   padding-bottom: 20px;
 }
 
-.eslogan{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+.eslogan {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  max-width: 90%;
 }
 
 .scroll-to-top {

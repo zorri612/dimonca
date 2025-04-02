@@ -7,20 +7,18 @@ const CheckoutPage = () => {
   const { cart, getTotalPrice } = useContext(CartContext);
 
   return (
-    <Container className="d-flex justify-content-center align-items-center mt-5">
-      <Card style={{ width: '400px' }} className="p-4 shadow-sm">
-        <h4 className="text-center mb-4">🧾 Resumen del Pedido</h4>
+    <Container className="d-flex justify-content-center align-items-center mt-4">
+      <Card className="p-3 shadow-sm text-center" style={{ maxWidth: '90%', minWidth: '300px' }}>
+        <h4 className="mb-3 fs-5">🧾 Resumen del Pedido</h4>
 
         {cart.length === 0 ? (
-          <p className="text-center">No hay productos en el carrito... 💔</p>
+          <p>No hay productos en el carrito.</p>
         ) : (
           <>
             {cart.map((item, index) => (
               <Row key={index} className="mb-2">
-                <Col xs={8}>
-                  <p className="mb-0">
-                    <strong>{item.name}</strong>
-                  </p>
+                <Col xs={8} className="text-start">
+                  <p className="mb-0 fw-bold">{item.name}</p>
                   <small>{item.quantity} x ${item.precio.toLocaleString()}</small>
                 </Col>
                 <Col xs={4} className="text-end fw-bold">
@@ -35,13 +33,13 @@ const CheckoutPage = () => {
             {/* Total */}
             <Row className="mt-2">
               <Col className="text-end">
-                <h5 className="fw-bold">Total: ${getTotalPrice().toLocaleString()}</h5>
+                <h5 className="fw-bold fs-5">Total: ${getTotalPrice().toLocaleString()}</h5>
               </Col>
             </Row>
 
             {/* Botón para confirmar */}
             <Row className="mt-3">
-              <Col className="text-center">
+              <Col>
                 <Button variant="primary" size="lg" className="w-100">
                   Confirmar Pedido ✅
                 </Button>
@@ -50,7 +48,7 @@ const CheckoutPage = () => {
 
             {/* Volver al carrito */}
             <Row className="mt-3">
-              <Col className="text-center">
+              <Col>
                 <Link to="/carrito" className="btn btn-secondary w-100">
                   Volver al Carrito 🛒
                 </Link>
